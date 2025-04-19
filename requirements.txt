@@ -2,15 +2,10 @@ asgiref==3.7.2
 bootstrap4==0.1.0
 Django==4.2.3
 django-jazzmin==2.6.0
-<<<<<<< HEAD
-Pillow==10.0.0
-psycopg-binary==3.1.9
-=======
 gunicorn==23.0.0
 packaging==24.2
 Pillow==10.0.0
 psycopg-binary==3.1.9
 psycopg2-binary==2.9.10
->>>>>>> 03f7a04 (prepare for deployment)
 sqlparse==0.4.4
 typing_extensions==4.7.1
