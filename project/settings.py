@@ -31,7 +31,8 @@ SECRET_KEY = 'django-insecure-b*@@k*eanlru%u2u@xjpu0y)o(x_%-=+h6u+uuh#zg9+0o4=6v
 DEBUG = True
 
 # ALLOWED_HOSTS = ['.vercel.app','.now.sh','127.0.0.1','localhost']
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['.railway.app']
+
 
 # Application definition
 
@@ -82,12 +83,21 @@ WSGI_APPLICATION = 'project.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
+# DATABASES = {
+#     'default': dj_database_url.config(
+#         default=os.environ.get('DATABASE_URL'),
+#         conn_max_age=600,
+#         ssl_require=True
+#     )
+# }
+
 DATABASES = {
-    'default': dj_database_url.config(
-        default=os.environ.get('DATABASE_URL'),
-        conn_max_age=600,
-        ssl_require=True
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME':'ecommerce',
+        'USER':'postgres',
+        'PASSWORD':'Admin',
+    }
 }
 
 # Password validation
